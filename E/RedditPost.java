@@ -3,47 +3,61 @@ package E;
 import java.util.Date;
 
 public class RedditPost {
-    private String date;
+    private Date postDate;//
     private String author;
     private int balance;
     private String title;
 
-    public RedditPost(String author, String date, int balance,String title) {
+    public RedditPost(String author, String title) {
         this.author = author;
-        this.date=date;
-        this.balance=balance;
-        this.title=title;
+        this.postDate = new Date(); //
+        this.balance = 1; //
+        this.title = title;
     }
 
-    public Cloneable getDate() {
-        return new Date();
+    //Getters & setters
+    public Date getPostDate() {
+        return postDate;
     }
 
     public String getAuthor() {
         return author;
     }
 
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
     public int getBalance() {
         return balance;
+    }
+
+    public void setBalance(int balance) {
+        this.balance = balance;
     }
 
     public String getTitle() {
         return title;
     }
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
     public static void main(String[] args) {
-        RedditPost post = new RedditPost("Patrick John", "23/4-2016", 0, "How to fix your car" );
-        post.getDate();
+        RedditPost post = new RedditPost("Patrick John",  "How to fix your car" );
+        post.getPostDate();
         System.out.println(post);
     }
 
     @Override
     public String toString() {
         return "RedditPost{" +
-                "date='" + date + '\'' +
+                "postDate=" + postDate +
                 ", author='" + author + '\'' +
                 ", balance=" + balance +
                 ", title='" + title + '\'' +
                 '}';
     }
 }
+

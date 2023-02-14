@@ -1,7 +1,5 @@
 package A;
 
-import D.Geometry;
-
 import java.util.Random;
 
 public class RandomNum {
