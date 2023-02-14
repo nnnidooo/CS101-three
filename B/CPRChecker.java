@@ -23,7 +23,6 @@ public class CPRChecker {
             return true;
         }
     }
-
 }
 //Write a method that returns if a user has input a valid CPR number.
 //A valid CPR number has: 10 digits,
