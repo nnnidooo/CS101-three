@@ -23,7 +23,7 @@ public class Square implements Comparable<Square> {
     }
 
     public static void main(String[] args) {
-        List<Square> squares = new ArrayList<>();
+        ArrayList<Square> squares = new ArrayList<>();
         squares.add(new Square(2.0, 7.0));
         squares.add(new Square(3.0, 12.0));
         squares.add(new Square(23.0, 8.0));
