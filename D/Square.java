@@ -41,17 +41,17 @@ public class Square implements Comparable<Square> {
         Square square2 = new Square(3.0,12.0);
         Square square3 = new Square(23.0,8.0);
 
+
         ArrayList<Square> squares = new ArrayList<>();
         squares.add(square1);
         squares.add(square2);
         squares.add(square3);
+        Collections.sort(squares);
+
 
         for (Square square : squares){
             System.out.println("Perimeter " + square.getPerimeter());
         }
-    
-        Collections.sort(squares);
-        System.out.println(squares);
 
 
     }
