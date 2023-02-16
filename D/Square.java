@@ -16,21 +16,43 @@ public class Square implements Comparable<Square> {
         return 2*(width+height);
     }
 
+    @Override
+    public String toString() {
+        return "Square{" +
+                "width=" + width +
+                ", height=" + height +
+                '}';
+    }
+
     //implementing the compareTo method.
     @Override
-    public int compareTo(Square o) {
-        return 0;
+    public int compareTo(Square comparingSquare) {
+        if(this.getPerimeter() > comparingSquare.getPerimeter()){
+            return -1;
+        } else {
+            return 1;
+        }
+
     }
 
     public static void main(String[] args) {
+
+        Square square1 = new Square(2.0,7.0);
+        Square square2 = new Square(3.0,12.0);
+        Square square3 = new Square(23.0,8.0);
+
         ArrayList<Square> squares = new ArrayList<>();
-        squares.add(new Square(2.0, 7.0));
-        squares.add(new Square(3.0, 12.0));
-        squares.add(new Square(23.0, 8.0));
-        Collections.sort(squares);
+        squares.add(square1);
+        squares.add(square2);
+        squares.add(square3);
 
         for (Square square : squares){
             System.out.println("Perimeter " + square.getPerimeter());
         }
+    
+        Collections.sort(squares);
+        System.out.println(squares);
+
+
     }
 }
