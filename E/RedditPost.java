@@ -20,6 +20,10 @@ public class RedditPost {
         return postDate;
     }
 
+    public void setPostDate(Date postDate) {
+        this.postDate = postDate;
+    }
+
     public String getAuthor() {
         return author;
     }
